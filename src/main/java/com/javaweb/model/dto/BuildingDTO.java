@@ -31,9 +31,9 @@ public class BuildingDTO extends AbstractDTO{
     private Long rentPrice;
     private String serviceFee;
     private Double brokerageFee;
-    private String image;
-    private String imageBase64;
-    private String imageName;
+    private String avatar;
+    private String avatarBase64;
+    private String avatarName;
 
     private Map<String,String> buildingDTOs = new HashMap<>();
 
@@ -70,31 +70,31 @@ public class BuildingDTO extends AbstractDTO{
         this.structure = structure;
     }
 
-    public String getImage() {
-        return image;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setavatar(String avatar) {
+        this.avatar = avatar;
     }
 
-    public String getImageBase64() {
-        if (imageBase64 != null) {
-            return imageBase64.split(",")[1];
+    public String getAvatarBase64() {
+        if (avatarBase64 != null) {
+            return avatarBase64.split(",")[1];
         }
         return null;
     }
 
-    public void setImageBase64(String imageBase64) {
-        this.imageBase64 = imageBase64;
+    public void setAvatarBase64(String avatarBase64) {
+        this.avatarBase64 = avatarBase64;
     }
 
-    public String getImageName() {
-        return imageName;
+    public String getAvatarName() {
+        return avatarName;
     }
 
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
+    public void setAvatarName(String avatarName) {
+        this.avatarName = avatarName;
     }
 
 

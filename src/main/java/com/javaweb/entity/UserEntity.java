@@ -38,8 +38,11 @@ public class UserEntity extends BaseEntity {
     @Column(name = "email", unique = true)
     private String email;
 
-    @OneToMany(mappedBy="staff", fetch = FetchType.LAZY)
-    private List<AssignmentBuildingEntity> assignmentBuildingEntities = new ArrayList<>();
+//    @OneToMany(mappedBy="staff", fetch = FetchType.LAZY)
+//    private List<AssignmentBuildingEntity> assignmentBuildingEntities = new ArrayList<>();
+
+    @ManyToMany(mappedBy = "staffs")
+    private List<BuildingEntity> buildings = new ArrayList<>();
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_role",

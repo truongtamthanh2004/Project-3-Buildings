@@ -123,6 +123,14 @@ public class BuildingEntity extends BaseEntity{
     @OneToMany(mappedBy="building", fetch=FetchType.LAZY) // mappedBy phai giong voi variable of RentAreaEntity
     private List<RentAreaEntity> rentAreas = new ArrayList<>();
 
-    @OneToMany(mappedBy="building", fetch=FetchType.LAZY)
-    private List<AssignmentBuildingEntity> assignmentBuildingEntities = new ArrayList<>();
+//    @OneToMany(mappedBy="building", fetch=FetchType.LAZY)
+//    private List<AssignmentBuildingEntity> assignmentBuildingEntities = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "assignmentBuilding",
+            joinColumns = @JoinColumn(name = "buildingid", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "staffid", nullable = false)
+    )
+    private List<UserEntity> staffs = new ArrayList<>();
 }
