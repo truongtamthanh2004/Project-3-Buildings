@@ -2,3 +2,5 @@
 This project includes 4 features which are adding, deleting, editing buildings and assigning them to staffs to manage.
 username: nguyenvana
 password: 123456
+version 1: OneToMany, ManyToOne
+version 2: ManyToMany
